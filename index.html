@@ -13,7 +13,86 @@
 </head>
 
 <body>
-HEllo!
-    </body>
-    
-    </html>
+
+    <div class="container">
+
+        <div class="card" id="cbody">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="form-city" placeholder="Enter a city">
+                        <button type="search" id="search" autofocus="on" autocomplete="off"
+                            class="btn btn-primary">search</button>
+                        <button type="search" id="geol" autofocus="on" autocomplete="off"
+                            class="btn btn-primary">geoloc</button>
+                        </br>
+                        </br>
+                        <h1 id="fecha"></h1>
+                    </div>
+
+
+
+                </form>
+                <br />
+                <br />
+
+
+                <div class="row" id="mid-row">
+
+                    <div class="col">
+                        <h1 id="ciudaddestino">Monterrey</h1>
+
+                        <h1 id="temp" class="celsius">-3</h1>
+                        <span class="celsius" id="degreesC" style="display:inline" aria-label="°Celsius">°C</span>
+                        <span class="pipe" id="degrees" style="display:inline"> | </span>
+                        <span class="fahrenheit" id="degreesF" style="display:inline" aria-label="°fahrenheit">°F</span>
+                        <i class="fas fa-cloud-rain" style="display:block"></i></br>
+
+                    </div>
+                    <div class="col">
+                        <h2 id="infoPre">Precipitation 30%</h2>
+                        <h2 id="infoHum">Humidity 10%</h2>
+                        <h2 id="infoWin">Wind 3 km/h</h2>
+                    </div>
+                    </br>
+                </div>
+
+                <div class="row" id="below-row">
+                    <div class="col3">
+                        <h2>Mon</h2>
+                        <h2>5°C</h2>
+                    </div>
+                    <div class="col3" border="solid">
+                        <h2>Tue</h2>
+                        <h2>4°C</h2>
+                    </div>
+                    <div class="col3" border="solid">
+                        <h2>Wed</h2>
+                        <h2>3°C</h2>
+                    </div>
+                    <div class="col3" border="solid">
+                        <h2>Thurs</h2>
+                        <h2>2°C</h2>
+                    </div>
+                    <div class="col3" border="solid">
+                        <h2>Fri</h2>
+                        <h2>1°C</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        </br>
+        </br>
+        <p id="signature">Coded by <img src="https://media.tenor.com/images/061791632c087b70134e2aa6f27c88c8/tenor.gif"
+                width=20px> </p>
+
+
+        <script src="src/index.js"></script>
+
+
+
+
+</body>
+
+</html>
