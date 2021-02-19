@@ -2,81 +2,93 @@
 <html>
 
 <head>
-    <title>Weather App</title>
     <meta charset="UTF-8" />
-    <link href="src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="src/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/b77cc8c1fd.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
+    <div id="skybg" class="sky country-side" z-order=-1>
 
-    <div class="container">
+        <div class="sky">
+            <div class="sun-moon"></div>
+            <div class="cloud one"></div>
+            <div class="cloud two"></div>
+            <div class="cloud three"></div>
+            <div class="cloud four"></div>
+            <div class="rainbow"></div>
+        </div>
+        <div class="hills"></div>
+
+
+
+    </div>
+
+    <div class="container" z-order=0>
 
         <div class="card" id="cbody">
             <div class="card-body">
                 <form>
                     <div class="form-group">
                         <input type="text" id="form-city" placeholder="Enter a city">
-                        <button type="search" id="search" autofocus="on" autocomplete="off"
-                            class="btn btn-primary">search</button>
-                        <button type="search" id="geol" autofocus="on" autocomplete="off"
-                            class="btn btn-primary">geoloc</button>
+                        <button type="search" id="search" autofocus="off" autocomplete="off"
+                            class="fas fa-search"></button>
+                        <button type="search" id="geol" autofocus="off" autocomplete="off"
+                            class="fas fa-map-marker-alt"></button>
                         </br>
-                        </br>
-                        <h1 id="fecha"></h1>
+
                     </div>
 
-
-
                 </form>
-                <br />
-                <br />
-
 
                 <div class="row" id="mid-row">
 
                     <div class="col">
-                        <h1 id="ciudaddestino">Monterrey</h1>
-
-                        <h1 id="temp" class="celsius">-3</h1>
+                        <h1 id="destinationcity">Monterrey</h1>
+                        <h1 id="weatherdate"></h1>
+                        <h1 id="temp" class="celsius"></h1>
                         <span class="celsius" id="degreesC" style="display:inline" aria-label="°Celsius">°C</span>
                         <span class="pipe" id="degrees" style="display:inline"> | </span>
                         <span class="fahrenheit" id="degreesF" style="display:inline" aria-label="°fahrenheit">°F</span>
-                        <i class="fas fa-cloud-rain" style="display:block"></i></br>
 
                     </div>
                     <div class="col">
-                        <h2 id="infoPre">Precipitation 30%</h2>
-                        <h2 id="infoHum">Humidity 10%</h2>
-                        <h2 id="infoWin">Wind 3 km/h</h2>
+                        <i id="weatherIcon" class="sunny"></i></br></br>
+                    </div>
+                    <div class="col" id="midcol">
+                        <h2 id="Description"></h2></br>
+                        <h2 id="infoHum"></h2>
+                        <h2 id="infoWin"></h2>
                     </div>
                     </br>
                 </div>
+                <h3> <strong>Have a look for next hours: </strong></h3></br></br>
 
-                <div class="row" id="below-row">
+                <div class="row" id="forecast">
+
                     <div class="col3">
-                        <h2>Mon</h2>
-                        <h2>5°C</h2>
+                        <p></p>
                     </div>
-                    <div class="col3" border="solid">
-                        <h2>Tue</h2>
-                        <h2>4°C</h2>
+                    <div class="col3">
+                        <p></p>
                     </div>
-                    <div class="col3" border="solid">
-                        <h2>Wed</h2>
-                        <h2>3°C</h2>
+                    <div class="col3">
+                        <p></p>
                     </div>
-                    <div class="col3" border="solid">
-                        <h2>Thurs</h2>
-                        <h2>2°C</h2>
+                    <div class="col3">
+                        <p></p>
                     </div>
-                    <div class="col3" border="solid">
-                        <h2>Fri</h2>
-                        <h2>1°C</h2>
+                    <div class="col3">
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -84,8 +96,15 @@
         </br>
         </br>
         </br>
-        <p id="signature">Coded by <img src="https://media.tenor.com/images/061791632c087b70134e2aa6f27c88c8/tenor.gif"
-                width=20px> </p>
+
+        <i class="fa-github fab" id="github-link" target="_blank"></i> <a id="signature"
+            href="https://github.com/AideAlvarado/my_weather_app"> Open Source Code</a><a
+            href="https://www.linkedin.com/in/maribel-alvarado/">  by Aide Alvarado
+        <i class="fab fa-linkedin" id="linkedin-link" target="_blank"></i></a>
+        </br>
+        </br>
+        </br>
+        </br>
 
 
         <script src="src/index.js"></script>
