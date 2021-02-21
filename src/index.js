@@ -1,6 +1,17 @@
 function zfill(num, len) {
   return (Array(len).join("0") + num).slice(-len);
 }
+function vwTOpx(value) {
+    var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+    var result = (x*value)/100;
+    return result;
+  }
 function showTime() {
   let now = new Date();
   let date = now.getDate();
@@ -20,6 +31,12 @@ function showTime() {
   let year = now.getFullYear();
   let texto = document.getElementById("weatherdate");
   texto.innerHTML = ` ${day}, ${hours}:${minutes}`;
+
+  let dummy = document.getElementById("card-body")
+  let backgroundsky= document.getElementById("skybg")
+  backgroundsky.style.height=`${dummy.clientHeight + Math.round(vwTOpx(5))}px`
+  console.log(dummy.clientHeight + vwTOpx(5))
+
 }
 function displayForecast(response) {
   let forecast = document.getElementById("forecast").querySelectorAll(".col3");
@@ -73,17 +90,17 @@ function showTemperature2(response) {
   let showCity = document.getElementById("destinationcity");
   showTemp.innerHTML = `${temperature}`;
   console.log(cityName.length);
-  showCity.innerHTML = `${cityName}`;
+  showCity.innerHTML = `&nbsp;&nbsp;${cityName}`;
   let letraC = document.getElementById("degreesC");
   let letraF = document.getElementById("degreesF");
   letraC.style.fontSize = "x-large";
   letraF.style.fontSize = "medium";
   let target = document.getElementById("temp");
   target.className = "celsius";
-  document.getElementById("infoHum").innerHTML = `humidity </br>${Math.round(
+  document.getElementById("infoHum").innerHTML = `humidity<br> ${Math.round(
     response.data.main.humidity
   )}%`;
-  document.getElementById("infoWin").innerHTML = `wind </br>${Math.round(
+  document.getElementById("infoWin").innerHTML = `wind<br>${Math.round(
     response.data.wind.speed
   )} Km/h`;
 
@@ -162,4 +179,12 @@ celsius.addEventListener("click", clickOnC);
 let fahrenheit = document.getElementById("degreesF");
 
 fahrenheit.addEventListener("click", clickOnC);
+
+let dummy = document.getElementById("card-body")
+let backgroundsky= document.getElementById("skybg")
+backgroundsky.style.display ="none"
+backgroundsky.style.height=`${dummy.clientHeight + Math.round(vwTOpx(5))}px`
+
+backgroundsky.style.display ="block"
+
 showTime();
