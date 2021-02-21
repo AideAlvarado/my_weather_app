@@ -26,91 +26,74 @@
             <div class="cloud three"></div>
             <div class="cloud four"></div>
             <div class="rainbow"></div>
-        </div>
+        </div> <!-- div class sky-->
         <div class="hills"></div>
-
-
-
-    </div>
-
-    <div class="container" z-order=0>
-
+        
+    </div><!--Sky backgriound-->
+        
+    <div class="container" z-order=0 id="maincontainer">
         <div class="card" id="cbody">
-            <div class="card-body">
+            <div class="card-body" id="card-body">
                 <form>
                     <div class="form-group">
                         <input type="text" id="form-city" placeholder="Enter a city">
-                        <button type="search" id="search" autofocus="off" autocomplete="off"
-                            class="fas fa-search"></button>
-                        <button type="search" id="geol" autofocus="off" autocomplete="off"
-                            class="fas fa-map-marker-alt"></button>
-                        </br>
-
-                    </div>
-
+                        <button type="search" id="search" autofocus="off" autocomplete="off" class="fas fa-search"></button>
+                        <button type="search" id="geol" autofocus="off" autocomplete="off"   class="fas fa-map-marker-alt"></button>
+                    </div> <!--div class= form-group-->
                 </form>
-
+                <div class="row">
+                    <h1 id="destinationcity">Monterrey</h1>
+                
+                </div>
                 <div class="row" id="mid-row">
-
-                    <div class="col">
-                        <h1 id="destinationcity">Monterrey</h1>
+                    <div class="col" id="destinationdatasummary">
+                       
                         <h1 id="weatherdate"></h1>
                         <h1 id="temp" class="celsius"></h1>
                         <span class="celsius" id="degreesC" style="display:inline" aria-label="°Celsius">°C</span>
                         <span class="pipe" id="degrees" style="display:inline"> | </span>
                         <span class="fahrenheit" id="degreesF" style="display:inline" aria-label="°fahrenheit">°F</span>
-
-                    </div>
-                    <div class="col">
-                        <i id="weatherIcon" class="sunny"></i></br></br>
+                    </div> <!--div class col destinationdatasummary-->
+                    <div class ="col" id="mid-col">
+                    <i id="weatherIcon" class="sunny"></i>
                     </div>
                     <div class="col" id="midcol">
-                        <h2 id="Description"></h2></br>
+                        <h2 id="Description"></h2>
                         <h2 id="infoHum"></h2>
                         <h2 id="infoWin"></h2>
-                    </div>
-                    </br>
+                    </div><!--div id=MidCol-->
+                </div> <!--div row mid-row-->
+                <div class="bee" z-order=2></div>
+                <div class="row">
+                    <h3> Have a look for next hours: </h3>
                 </div>
-                <h3> <strong>Have a look for next hours: </strong></h3></br></br>
-
+              
                 <div class="row" id="forecast">
+                    <div class="col3"> </div>
+                    <div class="col3"> </div>
+                    <div class="col3"> </div>
+                    <div class="col3"> </div>
+                    <div class="col3"> </div>
+                </div> <!--class row id forecast-->
+                <div class="row" id="signatureblock" z-order=2>
+                    <br>
+                        <i class="fa-github fab" id="github-link" target="_blank"></i> <a id="signature"
+                            href="https://github.com/AideAlvarado/my_weather_app">&nbsp;Open Source Code</a><a id="signaturename"
+                            href="https://www.linkedin.com/in/maribel-alvarado/">&nbsp;by Aide Alvarado
+                            <i class="fab fa-linkedin" id="linkedin-link" target="_blank"></i></a>
+                </div>      
+            </div> <!--card body-->
 
-                    <div class="col3">
-                        <p></p>
-                    </div>
-                    <div class="col3">
-                        <p></p>
-                    </div>
-                    <div class="col3">
-                        <p></p>
-                    </div>
-                    <div class="col3">
-                        <p></p>
-                    </div>
-                    <div class="col3">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </br>
-        </br>
-        </br>
-
-        <i class="fa-github fab" id="github-link" target="_blank"></i> <a id="signature"
-            href="https://github.com/AideAlvarado/my_weather_app"> Open Source Code</a><a
-            href="https://www.linkedin.com/in/maribel-alvarado/">  by Aide Alvarado
-        <i class="fab fa-linkedin" id="linkedin-link" target="_blank"></i></a>
-        </br>
-        </br>
-        </br>
-        </br>
+            <script src="src/index.js"></script>
+        </div><!--card id=cbody-->
+ 
+    </div><!-- DIV  container-->
 
 
-        <script src="src/index.js"></script>
+<script type="javascript">
 
 
-
+</script>
 
 </body>
 
