@@ -16,11 +16,7 @@ body {
   background-size: 300% 300%;
 }
 #cbody {
-  width: 80vw;
-  top: 5vw;
-  bottom: 2vw;
-   margin: 0 0 0 5vw;
-  padding: 2vw 0;
+  margin: 0 0 0 5vw;
   text-align: center;
   border: 2.5px solid grey;
   border-radius: 2vw;
@@ -29,7 +25,13 @@ body {
   -moz-box-shadow: 1vw 1.5vw 2vw -1vw  rgba(0, 0, 0, 0.75);
   box-shadow: 1vw 1.5vw 2vw -1vw  rgba(0, 0, 0, 0.75);
   opacity: 0.8;
+  /*
   height: max-content;
+  width: 80vw;
+  top: 5vw;
+  bottom: 2vw;
+  padding: 2vw 0;
+  */
 }
 #form-city {
   border: 1px groove #f3a469;
@@ -87,8 +89,10 @@ body {
 #weatherIcon {
   position: absolute;
   display: inline;
+  /*
   right: 80%;
   top: 10%;
+  */
 }
 
 h1,
@@ -101,28 +105,24 @@ h2 {
   color: blanchedalmond;
   font-size: x-large;
   font-family: "Poppins", sans-serif;
-  width: 40vw;
-
 }
 h3 {
-  color: rgb(223, 157, 58);
+  color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
-
   text-align: center;
   font-weight: lighter;
-  -webkit-text-stroke-color: rgb(201, 156, 60);
+  width: 40vw;
+  -webkit-text-stroke-color: rgb(236, 142, 0);
   -webkit-text-stroke-width: 1px;
 }
-a {
-  color: rgb(128, 42, 53);
-  text-decoration: none;
+#signaturename {
+  color: rgb(255, 255, 255);
   background-color: transparent;
   font-size: x-large;
-  font-weight: bold;
-  font-size: xx-large;
+  font-weight: lighter;
 }
 #Description {
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
   font-style: bold;
   font-size: xxx-large;
@@ -130,15 +130,15 @@ a {
 }
 #signature {
   font-family: Arial, Helvetica, sans-serif;
-  color: rgb(172, 44, 65);
-  font-weight: bold;
-  font-size: medium;
-  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  font-weight: lighter;
 }
 #github-link {
   font-size: x-large;
-  color: rgb(172, 44, 65);
-}
+  color: rgb(255, 255, 255);
+  
+  }
 
 #temp {
   display: inline;
@@ -164,8 +164,10 @@ a {
   top:-1vw;
 }
 #midcol {
+  /*
   width: 850px;
   height: 500px;
+
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -178,13 +180,22 @@ a {
   right: 20px;
   left: 50px;
   bottom: 50px;
+  */
+  border:none;
 }
 .col3 {
-  border: rgb(200, 212, 170) 2px solid;
+  border: rgb(200, 212, 170) 2px ;
   margin: 0 auto;
-  border: 2px;
 }
-
+.col{
+  border:none
+}
+.row{
+  border:none
+}
+#signaturebloc{
+  position:absolute
+}
 /*background from https://codepen.io/LisaManresa/pen/qxdCe, thanks Lisa !!!*/
 /* 
   VARIATIONS 
@@ -839,4 +850,31 @@ a {
       #eeeeee 90px 35px;
   }
 }
+/* Thanks Viola!!! https://codepen.io/JViola/pen/KzYPWK */
+.bee {
+  position: absolute;
+  background: url(http://cdn.ficsystems.com/_new/common/3.0/images/characters/earthday-bee.svg);
+  width: 75px;
+  height: 80px;
+  animation: walk-cycle 0.1s infinite steps(6), move 10s forwards linear;
+  animation-iteration-count:infinite;
+}
+@-webkit-keyframes walk-cycle {
+  0%   {background-position: 0 0;}
+  100% {background-position: -450px 0;}
+}
 
+
+@keyframes move {
+  0%    { transform: translate(-10vw, 10vh); }
+  10%   { transform: translate(0vw, 15vh); }
+  20%   { transform: translate(10vw, 20vh); }
+  30%   { transform: translate(20vw, 15vh); }
+  40%   { transform: translate(30vw, 10vh); }
+  50%   { transform: translate(40vw, 5vh); }
+  60%   { transform: translate(50vw, 0vh); }
+  70%   { transform: translate(60vw, 5vh); }
+  80%   { transform: translate(70vw, 10vh); }
+  90%   { transform: translate(80vw, 15vh); }
+  100%  { transform: translate(80vw, 20vh); }
+}
