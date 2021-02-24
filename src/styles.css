@@ -191,225 +191,6 @@ h3 {
 #signaturebloc{
   position:absolute
 }
-/*background from https://codepen.io/LisaManresa/pen/qxdCe, thanks Lisa !!!*/
-/* 
-  VARIATIONS 
-  Experiment with these styles by adding class names to the HTML elements.
-  See if you can determine the different combinations of class names available by reading through the styles below.
-*/
-.country-side.night .sky {
-  background: linear-gradient(to bottom, #020111 10%, #3a3a52 90%);
-}
-
-.country-side.night .sun-moon {
-  background-color: #ebede4;
-  box-shadow: 0px 0px 5px 5px #ebede4;
-}
-
-.country-side.night .hills {
-  opacity: 0.6;
-}
-
-.country-side.sunset .sky {
-  background: linear-gradient(to bottom, #52bae3 0%, #e9ce5d 50%, #e8a71a 90%);
-}
-
-.country-side.sunset .sun-moon {
-  margin: 175px 75% 0;
-  background: #fa9932;
-  box-shadow: 0px 0px 5px 5px #fa9932;
-}
-
-.country-side.sunset .hills {
-  opacity: 0.7;
-}
-
-.country-side.sunrise .sky {
-  background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 90%);
-}
-
-.country-side.sunrise .sun-moon {
-  margin: 25% 10% 0;
-  background: #faa35c;
-  box-shadow: 0px 0px 5px 5px #faa35c;
-}
-
-.country-side.sunrise .hills {
-  opacity: 0.6;
-}
-
-.country-side.cloudy .sky .cloud {
-  display: block;
-}
-
-/*
-  Try completing these styles on your own. Make a winter landscape by changing the background of the hills elements. Search in the CSS below to see how the hills base styles are defined
-
-.country-side.winter .hills,
-.country-side.winter .hills:before,
-.country-side.winter .hills:after {
-}
-*/
-/* 
-  BASE CSS 
-  These are the styles that set up the default look of the webpage. 
-*/
-
-.country-side {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.sky {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
-}
-
-.sun-moon {
-  background-color: #ffe626;
-  width: 90px;
-  height: 90px;
-  border-radius: 45px;
-  margin: 30px auto;
-  box-shadow: 0px 0px 15px 15px #ffe626;
-}
-
-.hills,
-.hills:after,
-.hills:before {
-  position: absolute;
-}
-
-.hills {
-  background: #b2e368;
-  width: 80%;
-  height: 300px;
-  left: 10%;
-  bottom: -130px;
-  border-radius: 150% 150% 0 0;
-  z-index: 0;
-}
-
-.hills:after,
-.hills:before {
-  content: "";
-  display: block;
-}
-
-.hills:after {
-  border: 1px solid #94c943;
-  background: #a4d952;
-  height: 80%;
-  width: 150%;
-  left: -80%;
-  bottom: 0;
-  border-radius: 100% 150% 0 0;
-  z-index: 1;
-}
-
-.hills:before {
-  background: #94c943;
-  border: 1px solid #94c943;
-  height: 70%;
-  width: 200%;
-  right: -130%;
-  bottom: 0;
-  border-radius: 100% 100% 0 0;
-  z-index: 2;
-  box-shadow: inset 0px 5px 20px 0px rgba(255, 255, 255, 0.2);
-}
-
-.sky .cloud {
-  display: 4;
-}
-
-.cloud {
-  width: 200px;
-  height: 60px;
-  background: #fff;
-
-  border-radius: 200px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  position: absolute;
-}
-
-.cloud:before,
-.cloud:after {
-  content: "";
-  position: absolute;
-  background: #fff;
-  width: 100px;
-  height: 80px;
-  position: absolute;
-  top: -15px;
-  left: 10px;
-
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-}
-
-.cloud:after {
-  width: 120px;
-  height: 120px;
-  top: -55px;
-  left: auto;
-  right: 15px;
-}
-
-.cloud.one {
-  top: 300px;
-  left: 30px;
-  opacity: 0.8;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-.cloud.two {
-  top: 120px;
-  left: 300px;
-  opacity: 0.8;
-}
-
-.cloud.three {
-  top: 320px;
-  right: 200px;
-  opacity: 0.8;
-}
-
-.cloud.four {
-  top: 170px;
-  right: 50px;
-  opacity: 0.7;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-/*
-  CHEAT SHEET
-  If you're stuck on creating styles, here are the solutions you can use:
-
-  For winter styles, copy the following 6 lines and paste them at the top of the file
-  .country-side.winter .hills,
-  .country-side.winter .hills:before,
-  .country-side.winter .hills:after {
-    background: white;
-    border: 2px solid #efefef;
-  }
-
-
-*/
 
 .sunny {
   animation: sunny 15s linear infinite;
@@ -845,6 +626,227 @@ h3 {
       #eeeeee 90px 35px;
   }
 }
+/*background from https://codepen.io/LisaManresa/pen/qxdCe, thanks Lisa !!!*/
+/* 
+  VARIATIONS 
+  Experiment with these styles by adding class names to the HTML elements.
+  See if you can determine the different combinations of class names available by reading through the styles below.
+*/
+.country-side.night .sky {
+  background: linear-gradient(to bottom, #020111 10%, #3a3a52 90%);
+}
+
+.country-side.night .sun-moon {
+  background-color: #ebede4;
+  box-shadow: 0px 0px 5px 5px #ebede4;
+}
+
+.country-side.night .hills {
+  opacity: 0.6;
+}
+
+.country-side.sunset .sky {
+  background: linear-gradient(to bottom, #52bae3 0%, #e9ce5d 50%, #e8a71a 90%);
+}
+
+.country-side.sunset .sun-moon {
+  margin: 175px 75% 0;
+  background: #fa9932;
+  box-shadow: 0px 0px 5px 5px #fa9932;
+}
+
+.country-side.sunset .hills {
+  opacity: 0.7;
+}
+
+.country-side.sunrise .sky {
+  background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 90%);
+}
+
+.country-side.sunrise .sun-moon {
+  margin: 25% 10% 0;
+  background: #faa35c;
+  box-shadow: 0px 0px 5px 5px #faa35c;
+}
+
+.country-side.sunrise .hills {
+  opacity: 0.6;
+}
+
+.country-side.cloudy .sky .cloud {
+  display: block;
+}
+
+/*
+  Try completing these styles on your own. Make a winter landscape by changing the background of the hills elements. Search in the CSS below to see how the hills base styles are defined
+
+.country-side.winter .hills,
+.country-side.winter .hills:before,
+.country-side.winter .hills:after {
+}
+*/
+/* 
+  BASE CSS 
+  These are the styles that set up the default look of the webpage. 
+*/
+
+.country-side {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sky {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
+}
+
+.sun-moon {
+  background-color: #ffe626;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  margin: 30px auto;
+  box-shadow: 0px 0px 15px 15px #ffe626;
+}
+
+.hills,
+.hills:after,
+.hills:before {
+  position: absolute;
+}
+
+.hills {
+  background: #b2e368;
+  width: 80%;
+  height: 300px;
+  left: 10%;
+  bottom: -130px;
+  border-radius: 150% 150% 0 0;
+  z-index: 0;
+}
+
+.hills:after,
+.hills:before {
+  content: "";
+  display: block;
+}
+
+.hills:after {
+  border: 1px solid #94c943;
+  background: #a4d952;
+  height: 80%;
+  width: 150%;
+  left: -80%;
+  bottom: 0;
+  border-radius: 100% 150% 0 0;
+  z-index: 1;
+}
+
+.hills:before {
+  background: #94c943;
+  border: 1px solid #94c943;
+  height: 70%;
+  width: 200%;
+  right: -130%;
+  bottom: 0;
+  border-radius: 100% 100% 0 0;
+  z-index: 2;
+  box-shadow: inset 0px 5px 20px 0px rgba(255, 255, 255, 0.2);
+}
+
+.sky .cloud {
+  display: 4;
+}
+
+.cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: absolute;
+}
+
+.cloud:before,
+.cloud:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+
+.cloud.one {
+  top: 300px;
+  left: 30px;
+  opacity: 0.8;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.cloud.two {
+  top: 120px;
+  left: 300px;
+  opacity: 0.8;
+}
+
+.cloud.three {
+  top: 320px;
+  right: 200px;
+  opacity: 0.8;
+}
+
+.cloud.four {
+  top: 170px;
+  right: 50px;
+  opacity: 0.7;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+/*
+  CHEAT SHEET
+  If you're stuck on creating styles, here are the solutions you can use:
+
+  For winter styles, copy the following 6 lines and paste them at the top of the file
+  .country-side.winter .hills,
+  .country-side.winter .hills:before,
+  .country-side.winter .hills:after {
+    background: white;
+    border: 2px solid #efefef;
+  }
+
+
+*/
+
+
 /* Thanks Viola!!! https://codepen.io/JViola/pen/KzYPWK */
 .bee {
   position: absolute;
