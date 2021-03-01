@@ -850,7 +850,7 @@ h3 {
 /* Thanks Viola!!! https://codepen.io/JViola/pen/KzYPWK */
 .bee {
   position: absolute;
-  background: url(http://cdn.ficsystems.com/_new/common/3.0/images/characters/earthday-bee.svg);
+  background: url(src/earthday-bee.svg);
   width: 75px;
   height: 80px;
   animation: walk-cycle 0.1s infinite steps(6), move 10s forwards linear;
